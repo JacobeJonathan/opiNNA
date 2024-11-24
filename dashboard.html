@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interactivo</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <h1>Dashboard de Cuestionario</h1>
+    <div id="chart"></div>
+
+    <script>
+        async function obtenerDatos() {
+            const response = await fetch('http://localhost:3000/datos');
+            const datos = await response.json();
+            return datos;
+        }
+
+        async function renderizarGrafico() {
+            const datos = await obtenerDatos();
+            const edades = datos.map(d => d.Edad);
+            const nombres = datos.map((_, i) => `Niño ${i + 1}`);
+
+            const options = {
+                chart: {
+                    type: 'bar'
+                },
+                series: [
+                    {
+                        name: 'Edades',
+                        data: edades
+                    }
+                ],
+                xaxis: {
+                    categories: nombres
+                }
+            };
+
+            const chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        }
+
+        renderizarGrafico();
+    </script>
+</body>
+</html>

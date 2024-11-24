@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario de Opinión</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cuestionario de Opinión</h1>
+        <form id="opinionForm">
+            <h2>Datos Personales</h2>
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="niña">Niña</option>
+                <option value="niño">Niño</option>
+            </select>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="grado">Año / Grado en el Colegio:</label>
+            <input type="text" id="grado" name="grado" required>
+
+            <label for="fecha">Fecha de hoy:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <h2>Preguntas Abiertas</h2>
+            <label for="edadLlegada">Cuando llegué al hogar, tenía:</label>
+            <input type="number" id="edadLlegada" name="edadLlegada" required>
+
+            <label for="edadActual">Ahora tengo:</label>
+            <input type="number" id="edadActual" name="edadActual" required>
+
+            <h2>Actividades en el Hogar</h2>
+            <div>
+                <label>Voy al colegio:</label>
+                <select name="colegio">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>La comida que me dan es rica:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Tengo mi cama para dormir:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Juego con mis amigos:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Salgo de paseo:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Hago deporte en el hogar:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Hago mis tareas escolares:</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Tengo mis vacunas contra el COVID 19 :</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Me llevan al doctor cuando me enfermo :</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <div>
+                <label>Tengo buen trato en el hogar :</label>
+                <select name="comida">
+                    <option value="triste">😔 Triste</option>
+                    <option value="feliz">😃 Feliz</option>
+                    <option value="neutral">😐 Me da igual</option>
+                    <option value="molesta">😡 Molesta</option>
+                </select>
+            </div>
+            <h2>Plan de Trabajo y Buzón</h2>
+            <label for="planTrabajo">¿Sabes qué es el Plan de Trabajo Individual?</label>
+            <select id="planTrabajo" name="planTrabajo" required>
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+
+            <label for="buzon">¿Hay un buzón de sugerencias o reclamos en el hogar?</label>
+            <select id="buzon" name="buzon" required>
+                <option value="1">Sí</option>
+                <option value="0">No</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+    <script src="server.js"></script>
+</body>
+</html>
